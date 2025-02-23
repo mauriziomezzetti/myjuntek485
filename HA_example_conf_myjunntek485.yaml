@@ -1,0 +1,167 @@
+
+mqtt:
+    sensor:
+ 
+     ########################################
+     #######    J_2140_132_837    80A     ###
+     ########################################
+            
+      - name: "J_shunt 80A temp"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_temp
+        value_template: '{{value_json["jt_temp"] }}'
+        device_class: "temperature"
+        suggested_display_precision: 1
+        unit_of_measurement: "°C"
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"    
+           
+      - name: "J_shunt 80A soc"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_SOC
+        value_template: '{{value_json["jt_soc"] }}'
+        unit_of_measurement: "%"
+        device_class: battery
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"  
+     
+      - name: "J_shunt 80A Ah res"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_Ahres
+        value_template: '{{value_json["jt_ar"] }}'
+        device_class: "energy_storage"
+        unit_of_measurement: "Ah"
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80" 
+       
+      - name: "J_shunt 80A current"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_curr
+        value_template: '{{value_json["jt_amp"] }}'
+        device_class: "current"
+        unit_of_measurement: "A"
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80" 
+       
+      - name: "J_shunt 80A volt"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_volt
+        value_template: '{{value_json["jt_volt"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80" 
+                                                      
+      - name: "J_shunt 80A serial"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_serial
+        value_template: '{{value_json["jt_serial"] }}'
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80" 
+                                                                       
+      - name: "J_shunt 80A model"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_model
+        value_template: '{{value_json["jt_model"] }}'
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"             
+                                                                       
+      - name: "J_shunt 80A softv"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_softv
+        value_template: '{{value_json["jt_soft"] }}'
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"         
+                                                  
+      - name: "J_shunt 80A name"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_name
+        value_template: '{{value_json["jt_name"] }}'
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"         
+                                                                       
+      - name: "J_shunt 80A int resist"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_int_res
+        value_template: '{{value_json["jt_resi"] }}'
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"    
+                                                                      
+      - name: "J_shunt 80A minute rest"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_min_rest
+        value_template: '{{value_json["jt_mir"] }}'
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"    
+     
+      - name: "J_shunt 80A watt"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_watt
+        value_template: '{{value_json["jt_watt"] }}'
+        device_class: "power"
+        suggested_display_precision: 1
+        unit_of_measurement: "W"
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"    
+     
+      
+      - name: "J_shunt 80A tot charge"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_tot_charge
+        value_template: '{{value_json["jt_cum_charge_kwh"] }}'
+        device_class: "energy_storage"
+        suggested_display_precision: 1
+        unit_of_measurement: "kWh"
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80"    
+     
+      - name: "J_shunt 80A timestamp"
+        state_topic: "J_2140_132_837/status"
+        unique_id: batt80_timestamp
+        value_template: '{{ (value_json["timestamp"] | int)| timestamp_local }}'
+        device_class: "timestamp"
+        device:
+           identifiers: J_shunt_80
+           manufacturer: "junktek"
+           name: j_shunt_80
+           model: "80" 
+     
